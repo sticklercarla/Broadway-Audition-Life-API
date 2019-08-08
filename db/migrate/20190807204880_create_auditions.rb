@@ -16,6 +16,7 @@ class CreateAuditions < ActiveRecord::Migration[5.2]
       t.boolean :sides_performed
       t.boolean :callback
       t.boolean :booked
+      t.string :notes
 
       t.timestamps
     end

@@ -39,6 +39,7 @@ ActiveRecord::Schema.define(version: 2019_08_07_204880) do
     t.boolean "sides_performed"
     t.boolean "callback"
     t.boolean "booked"
+    t.string "notes"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["audition_location_id"], name: "index_auditions_on_audition_location_id"
