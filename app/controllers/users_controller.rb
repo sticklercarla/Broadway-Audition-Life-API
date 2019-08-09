@@ -6,7 +6,6 @@ class UsersController < ApplicationController
     
     def create
         user = User.create(user_params)
-
         if user.valid?
             render json: { token: encode_token(user) }
         else
@@ -31,7 +30,7 @@ class UsersController < ApplicationController
     private
 
     def user_params
-        params.permit(:username, :name, :password, :profile_pic)
+        params.permit(:username, :name, :password, :password_confirmation, :profile_pic)
     end
 
 
