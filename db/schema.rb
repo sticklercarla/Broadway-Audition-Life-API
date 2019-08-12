@@ -55,21 +55,14 @@ ActiveRecord::Schema.define(version: 2019_08_07_204880) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "song_books", force: :cascade do |t|
-    t.bigint "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_song_books_on_user_id"
-  end
-
   create_table "songs", force: :cascade do |t|
     t.string "title"
     t.bigint "style_id"
-    t.bigint "song_book_id"
+    t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["song_book_id"], name: "index_songs_on_song_book_id"
     t.index ["style_id"], name: "index_songs_on_style_id"
+    t.index ["user_id"], name: "index_songs_on_user_id"
   end
 
   create_table "styles", force: :cascade do |t|
@@ -92,7 +85,6 @@ ActiveRecord::Schema.define(version: 2019_08_07_204880) do
   add_foreign_key "auditions", "songs"
   add_foreign_key "auditions", "styles"
   add_foreign_key "auditions", "users"
-  add_foreign_key "song_books", "users"
-  add_foreign_key "songs", "song_books"
   add_foreign_key "songs", "styles"
+  add_foreign_key "songs", "users"
 end

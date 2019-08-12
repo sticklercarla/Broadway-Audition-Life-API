@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :song_books
   resources :auditions
   resources :audition_locations
   resources :casting_offices

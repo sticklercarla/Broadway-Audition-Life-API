@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
     def index
         users = User.all 
-        render json: users, include: [:song_books, :auditions, :songs, :casting_offices, :audition_locations, :styles]
+        render json: users, include: [:auditions, :songs, :casting_offices, :audition_locations, :styles]
     end
     
     def create
