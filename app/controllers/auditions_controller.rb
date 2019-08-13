@@ -12,15 +12,23 @@ class AuditionsController < ApplicationController
 
     def update
         audition = Audition.find(params[:id])
-        unless audition.update(audition_params)
+        if audition.update(audition_params)
+            render json: audition
+        else
             render json: { errors: audition.errors.full_messages }, status: :unprocessable_entity
         end
+    end
+
+    def destroy
+        audition = Audition.find(params[:id])
+        audition.destroy
+        render json: auditions
     end
 
     private
 
     def audition_params
-        params.permit(:user_id, :song_id, :casting_office_id, :style, :audition_location_id, :song_length, :musical_title, :appointment, :outfit_img, :date, :time, :sides, :sides_performed, :callback, :booked)
+        params.permit(:user_id, :song_id, :casting_office_id, :style, :audition_location_id, :song_length, :musical_title, :appointment, :outfit_img, :date, :time, :sides, :sides_performed, :callback, :booked, :notes)
     end
 
 end
