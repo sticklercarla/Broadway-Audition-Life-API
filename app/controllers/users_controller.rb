@@ -1,13 +1,13 @@
 class UsersController < ApplicationController
     def index
         users = User.all 
-        render json: users, include: [:auditions, :songs, :casting_offices, :audition_locations, :styles]
+        render json: users, include: [:auditions, :songs, :casting_offices, :audition_locations]
     end
     
     def create
         user = User.create(user_params)
         if user.valid?
-            render json: { token: encode_token(user) }
+            render json: { token: encode_token(user), user: user }, include: [:songs, :auditions]
         else
             render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
         end
@@ -24,7 +24,7 @@ class UsersController < ApplicationController
     end
 
     def profile
-        render json: current_user
+        render json: current_user, include: [:songs, :auditions]
     end
 
     private

@@ -4,7 +4,6 @@ Rails.application.routes.draw do
   resources :casting_offices
   resources :users
   resources :songs
-  resources :styles
   post '/login', to: 'auth#create'
   post '/signup', to: 'users#create'
   get '/profile', to: 'users#profile'

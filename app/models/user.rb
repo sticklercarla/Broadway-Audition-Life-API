@@ -7,6 +7,5 @@ class User < ApplicationRecord
     has_many :songs
     has_many :casting_offices, through: :auditions
     has_many :audition_locations, through: :auditions
-    has_many :styles, through: :auditions
     
 end

@@ -20,7 +20,7 @@ class AuditionsController < ApplicationController
     private
 
     def audition_params
-        params.permit(:user_id, :song_id, :casting_office_id, :style_id, :audition_location_id, :song_length, :musical_title, :appointment, :outfit_img, :date, :time, :sides, :sides_performed, :callback, :booked)
+        params.permit(:user_id, :song_id, :casting_office_id, :style, :audition_location_id, :song_length, :musical_title, :appointment, :outfit_img, :date, :time, :sides, :sides_performed, :callback, :booked)
     end
 
 end

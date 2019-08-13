@@ -4,7 +4,7 @@ class CreateAuditions < ActiveRecord::Migration[5.2]
       t.references :user, foreign_key: true
       t.references :song, foreign_key: true
       t.references :casting_office, foreign_key: true
-      t.references :style, foreign_key: true
+      t.string :style
       t.references :audition_location, foreign_key: true
       t.string :song_length
       t.string :musical_title

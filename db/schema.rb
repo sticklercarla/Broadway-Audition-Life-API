@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(version: 2019_08_07_204880) do
     t.bigint "user_id"
     t.bigint "song_id"
     t.bigint "casting_office_id"
-    t.bigint "style_id"
+    t.string "style"
     t.bigint "audition_location_id"
     t.string "song_length"
     t.string "musical_title"
@@ -45,7 +45,6 @@ ActiveRecord::Schema.define(version: 2019_08_07_204880) do
     t.index ["audition_location_id"], name: "index_auditions_on_audition_location_id"
     t.index ["casting_office_id"], name: "index_auditions_on_casting_office_id"
     t.index ["song_id"], name: "index_auditions_on_song_id"
-    t.index ["style_id"], name: "index_auditions_on_style_id"
     t.index ["user_id"], name: "index_auditions_on_user_id"
   end
 
@@ -57,18 +56,14 @@ ActiveRecord::Schema.define(version: 2019_08_07_204880) do
 
   create_table "songs", force: :cascade do |t|
     t.string "title"
-    t.bigint "style_id"
+    t.string "style"
+    t.string "composer"
+    t.string "lyricist"
+    t.string "performed_by"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["style_id"], name: "index_songs_on_style_id"
     t.index ["user_id"], name: "index_songs_on_user_id"
-  end
-
-  create_table "styles", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -83,8 +78,6 @@ ActiveRecord::Schema.define(version: 2019_08_07_204880) do
   add_foreign_key "auditions", "audition_locations"
   add_foreign_key "auditions", "casting_offices"
   add_foreign_key "auditions", "songs"
-  add_foreign_key "auditions", "styles"
   add_foreign_key "auditions", "users"
-  add_foreign_key "songs", "styles"
   add_foreign_key "songs", "users"
 end
