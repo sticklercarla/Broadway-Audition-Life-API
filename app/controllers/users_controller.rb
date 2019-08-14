@@ -14,13 +14,20 @@ class UsersController < ApplicationController
     end
 
     def update
-        unless current_user.update(user_params)
-            render json: { errors: current_user.errors.full_messages }, status: :unprocessable_entity
+        user = User.find(params[:id])
+        if user.update(user_params)
+            render json: user
+        else
+            render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
         end
     end
 
     def destroy
-        current_user.destroy
+        user = User.find(params[:id])
+        if user.destroy
+        else 
+            render json: { errors: user.errors.full_messages }, status: :unprocessable_entity
+        end
     end
 
     def profile

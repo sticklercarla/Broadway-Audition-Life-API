@@ -6,10 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.create(name: "Carla", username: "sticklercarla", password: "123")
-User.create(name: "Adam", username: "pasulka", password: "123")
-User.create(name: "Sarah", username: "dellorto", password: "123")
-User.create(name: "Rachel", username: "roth", password: "123")
+User.create(name: "Carla", username: "sticklercarla", password: "123", profile_pic: "/images/default_avataaar.png")
+User.create(name: "Adam", username: "pasulka", password: "123", profile_pic: "/images/default_avataaar.png")
+User.create(name: "Sarah", username: "dellorto", password: "123", profile_pic: "/images/default_avataaar.png")
+User.create(name: "Rachel", username: "roth", password: "123", profile_pic: "/images/default_avataaar.png")
 
 Song.create(title: "Heartbreaker", composer: "Geoff Gill", lyricist: "Cliff Wade", performed_by: "Pat Benatar", style: "Rock", user_id: 1)
 Song.create(title: "Change In Me", composer: "Alan Menken", lyricist: "Tim Rice", performed_by: "Andrea McArdle", style: "Disney", user_id: 1)
