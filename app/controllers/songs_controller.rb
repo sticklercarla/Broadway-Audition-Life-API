@@ -13,6 +13,6 @@ class SongsController < ApplicationController
     private
 
     def song_params
-        params.permit(:user_id, :title, :composer, :lyricist, :performed_by, :style)
+        params.permit(:user_id, :title, :composer, :lyricist, :performed_by, :style, :video_key)
     end
 end

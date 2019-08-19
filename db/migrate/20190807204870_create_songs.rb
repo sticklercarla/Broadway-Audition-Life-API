@@ -6,6 +6,7 @@ class CreateSongs < ActiveRecord::Migration[5.2]
       t.string :composer
       t.string :lyricist
       t.string :performed_by
+      t.string :video_key
       t.references :user, foreign_key: true
       t.timestamps
     end

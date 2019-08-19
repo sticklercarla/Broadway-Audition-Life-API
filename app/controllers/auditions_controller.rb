@@ -7,7 +7,11 @@ class AuditionsController < ApplicationController
 
     def create
         audition = Audition.create(audition_params)
-        render json: audition
+        if audition.valid? 
+            render json: audition
+        else
+            render json: {errors: audition.errors.full_messages}, status: :unprocessable_entity
+        end
     end
 
     def update

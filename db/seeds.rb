@@ -11,12 +11,12 @@ User.create(name: "Adam", username: "pasulka", password: "123", profile_pic: "/i
 User.create(name: "Sarah", username: "dellorto", password: "123", profile_pic: "/images/default_avataaar.png")
 User.create(name: "Rachel", username: "roth", password: "123", profile_pic: "/images/default_avataaar.png")
 
-Song.create(title: "Heartbreaker", composer: "Geoff Gill", lyricist: "Cliff Wade", performed_by: "Pat Benatar", style: "Rock", user_id: 1)
-Song.create(title: "Change In Me", composer: "Alan Menken", lyricist: "Tim Rice", performed_by: "Andrea McArdle", style: "Disney", user_id: 1)
-Song.create(title: "Heartbreaker", composer: "Geoff Gill", lyricist: "Cliff Wade", performed_by: "Pat Benatar", style: "Rock", user_id: 3)
-Song.create(title: "Heartbreaker", composer: "Geoff Gill", lyricist: "Cliff Wade", performed_by: "Pat Benatar", style: "Rock", user_id: 4)
-Song.create(title: "I Have Confidence", composer: "Richard Rogers", lyricist: "Oscar Hammerstein II", performed_by: "Julie Andrews", style: "Golden Age", user_id: 1)
-Song.create(title: "Bohemian Rhapsody", composer: "Freddie Mercury", performed_by: "Freddie Mercury", style: "Rock", user_id: 2)
+Song.create(title: "Heartbreaker", composer: "Geoff Gill", lyricist: "Cliff Wade", performed_by: "Pat Benatar", style: "Rock", user_id: 1, video_key: "mIosHNpGjTE")
+Song.create(title: "Change In Me", composer: "Alan Menken", lyricist: "Tim Rice", performed_by: "Andrea McArdle", style: "Disney", user_id: 1, video_key: "X49871VnQoc")
+Song.create(title: "Heartbreaker", composer: "Geoff Gill", lyricist: "Cliff Wade", performed_by: "Pat Benatar", style: "Rock", user_id: 3, video_key: "mIosHNpGjTE")
+Song.create(title: "Heartbreaker", composer: "Geoff Gill", lyricist: "Cliff Wade", performed_by: "Pat Benatar", style: "Rock", user_id: 4, video_key: "mIosHNpGjTE")
+Song.create(title: "I Have Confidence", composer: "Richard Rogers", lyricist: "Oscar Hammerstein II", performed_by: "Julie Andrews", style: "Golden Age", user_id: 1, video_key: "JJYz8pyXOG4")
+Song.create(title: "Bohemian Rhapsody", composer: "Freddie Mercury", performed_by: "Freddie Mercury", style: "Rock", user_id: 2, video_key: "fJ9rUzIMcZQ")
 
 CastingOffice.create(name: "Other")
 CastingOffice.create(name: "Telsey + Company")

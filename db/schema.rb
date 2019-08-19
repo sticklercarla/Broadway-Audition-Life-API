@@ -60,6 +60,7 @@ ActiveRecord::Schema.define(version: 2019_08_07_204880) do
     t.string "composer"
     t.string "lyricist"
     t.string "performed_by"
+    t.string "video_key"
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
