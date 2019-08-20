@@ -6,9 +6,21 @@ class SongsController < ApplicationController
 
     def create
         song = Song.create(song_params)
-        render json: song
+        if song.valid?
+            render json: song
+        else
+            render json: { errors: song.errors.full_messages }, status: :unprocessable_entity
+        end
     end
 
+    def update
+        song = Song.find(params[:id])
+        if song.update(song_params)
+            render json: song
+        else 
+            render json: { errors: song.errors.full_messages }, status: :unprocessable_entity
+        end
+    end 
 
     private
 
