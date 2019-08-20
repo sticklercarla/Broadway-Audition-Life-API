@@ -18,6 +18,7 @@ Song.create(title: "Heartbreaker", composer: "Geoff Gill", lyricist: "Cliff Wade
 Song.create(title: "I Have Confidence", composer: "Richard Rogers", lyricist: "Oscar Hammerstein II", performed_by: "Julie Andrews", style: "Golden Age", user_id: 1, video_key: "JJYz8pyXOG4")
 Song.create(title: "Bohemian Rhapsody", composer: "Freddie Mercury", performed_by: "Freddie Mercury", style: "Rock", user_id: 2, video_key: "fJ9rUzIMcZQ")
 
+
 CastingOffice.create(name: "Other")
 CastingOffice.create(name: "Telsey + Company")
 CastingOffice.create(name: "Tara Rubin Casting")
@@ -34,6 +35,7 @@ CastingOffice.create(name: "Stewart Whitley Casting")
 CastingOffice.create(name: "McCorkle Casting")
 CastingOffice.create(name: "Avy Kaufman Casting")
 
+AuditionLocation.create(name: "Other")
 AuditionLocation.create(name: "At Casting Office")
 AuditionLocation.create(name: "Ripley-Grier 520 8th Ave")
 AuditionLocation.create(name: "Pearl Studios")
